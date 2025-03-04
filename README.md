@@ -30,26 +30,28 @@
 
 ![Result](./img/5.%20rESULT.png)
 
-> I entered the public address into a web browser, and through this rule we're able to access the website.
+> I entered the public address into a web browser, and through this public ip i'm able to access the website.
 
 # Network ACLs
 
-> Network ACL was created under the security option on the VPC page. NACLs is names *my-first-NACLs, and our VPC is attached to the netwrok ACL.
+>  I navigated to the VPC section, selected NACLs, and then proceeded to create a new NACL by providing a name and choosing the VPC I had previously created on AWS.
 
-> By default all traffic from all ports have been denied. This will be the same for the outnound and inbound rule.
+>   he next step is to navigate to the inbound and outbound rules to check if all traffic has been denied.
 
-> To make chnages, edit inbound rule, add new rule, configure as *All traffic, source 0.0.0.0/0, Allow*. 
+> After confirming that both the inbound and outbound rules are denying traffic, the next step is to make changes to them.
 
-see image below.
+> i make changes on both inbound rule and outbound rule by selecting them one after the other annd add new rule, configure as *All traffic, source 0.0.0.0/0, Allow*. 
+
+image bellow show the result after 
 
 ![NACLs](./img/7.%20cteate%20NACLs.png)
 
 
-> This NACL was also assocociated with the public subnet in the VPC.
+> i processed to associate my NACLs with VPC in AWS
 
 ![SUNNET-NACLs](./img/9.%20subnet%20associated.png)
 
-> Although we have permitted all traffic in the inbound rule of our NACL, we still need to allow all traffic in the outbound rule. 
+> After permitting all traffic in the inbound rule of the NACL, I still needed to allow all traffic in the outbound rule. 
 
 > This is because NACLs are stateless, they do not automatically allow return traffic. Hence we need to explicitly configure rules for both inbound and ourbound rule. 
 
