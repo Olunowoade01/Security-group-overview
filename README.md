@@ -10,7 +10,7 @@
 > After creating an Ec2 instant, I created a security group and attached with the Vpc that was created at the start of the project.
 
 
-> The security group for this instance was configured as * Inbound rules * and Allow - SSH - port 22, HTTP - port 80,  ICMP-IPv4 - All
+> The security group for this instance was configured as * Inbound rules and Allow - SSH - port 22, HTTP - port 80,  ICMP-IPv4 - All
 
 ![Sg inbound ](./img/2.%20Inbound%20rules.png)
 
@@ -34,24 +34,26 @@
 
 # Network ACLs
 
->  I navigated to the VPC section, selected NACLs, and then proceeded to create a new NACL by providing a name and choosing the VPC I had previously created on AWS.
+>  Network ACL was created under the security option on the VPC page. NACLs is names *my-first-NACLs, and our VPC is attached to the netwrok ACL.
 
->   he next step is to navigate to the inbound and outbound rules to check if all traffic has been denied.
 
-> After confirming that both the inbound and outbound rules are denying traffic, the next step is to make changes to them.
+>   the next step is to navigate to the inbound and outbound rules to check if all traffic has been denied.
 
-> i make changes on both inbound rule and outbound rule by selecting them one after the other annd add new rule, configure as *All traffic, source 0.0.0.0/0, Allow*. 
+> By default all traffic from all ports have been denied. This will be the same for the outnound and inbound rule.
+
+> i make changes on both inbound rule and outbound rule and add new rule, configure as All traffic, source 0.0.0.0/0, Allow 
 
 image bellow show the result after 
 
 ![NACLs](./img/7.%20cteate%20NACLs.png)
 
 
-> i processed to associate my NACLs with VPC in AWS
+> This NACL was also assocociated with the public subnet in the VPC.
+
 
 ![SUNNET-NACLs](./img/9.%20subnet%20associated.png)
 
-> After permitting all traffic in the inbound rule of the NACL, I still needed to allow all traffic in the outbound rule. 
+> Although i have permitted all traffic in the inbound rule of our NACL, we still need to allow all traffic in the outbound rule. 
 
 > This is because NACLs are stateless, they do not automatically allow return traffic. Hence we need to explicitly configure rules for both inbound and ourbound rule. 
 
@@ -65,6 +67,5 @@ image bellow show the result after
 
 - I successfully configured Security Groups and NACLs to manage inbound and outbound traffic in AWS
 
-- I learned valuable troubleshooting techniques for diagnosing and resolving network connectivity issues in AWS.
 
 - Overall, I gained practical experience and confidence in managing network security within AWS environments.
