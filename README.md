@@ -5,7 +5,7 @@
 
 > In the public subnet, an EC2 instance was created to the webiste.
 
-![Ec2 instant](./img/1.%20EC2%20instance.png)
+![Ec2 instant](./img/1%20instant.png)
 
 > After creating an Ec2 instant, I created a security group and attached with the Vpc that was created at the start of the project.
 
@@ -43,9 +43,16 @@
 
 > i make changes on both inbound rule and outbound rule and add new rule, configure as All traffic, source 0.0.0.0/0, Allow 
 
-image bellow show the result after 
+
+
+image bellow show the result aftter for inbound rule
 
 ![NACLs](./img/7.%20cteate%20NACLs.png)
+
+
+> A result after for outbound rule
+
+![outbound](./img/11%20outbound%20rule.png)
 
 
 > This NACL was also assocociated with the public subnet in the VPC.
