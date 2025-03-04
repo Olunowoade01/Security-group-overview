@@ -1,22 +1,24 @@
 
-# Implementing Inbound Traffic Rules for HTTP and SSH Protocol.
+#  The process is too understand the concepts of security group and NACLs in AWS
 
-> The first step taken was to create a VPC and configure 2 subnets (Public & private subnet) in it.
+> The first step taken was to create a security group allowing HTTP for all traffic and i attached it to the instance.
 
-> In the public subnet, an instance was created to host our website.
+> In the public subnet, an EC2 instance was created to the webiste.
 
 ![Ec2 instant](./img/1.%20EC2%20instance.png)
 
-> I created a security group and nammed it *My-public-SG*, attaching the Vpc that was created at the start of the project.
+> After creating an Ec2 instant, I created a security group and attached with the Vpc that was created at the start of the project.
 
 
-> The security group for this instance was configured as *Inbound rules* - SSH - port 22, HTTP - port 80,  ICMP-IPv4 - All
+> The security group for this instance was configured as * Inbound rules * and Allow - SSH - port 22, HTTP - port 80,  ICMP-IPv4 - All
 
 ![Sg inbound ](./img/2.%20Inbound%20rules.png)
 
-> For the *outbound rules*, i have configured all IPv4 traffic with any protocol on any port number is allowed, meaning this insatnce has unrestricted access to anywhere on the internet.
+> For the *outbound rules*, i configured all IPv4 traffic with any protocol on any port number to be  allowed, meaning this insatnce has unrestricted access to anywhere on the internet.
 
 ![SG-outbound](./img/3.%20Outbound%20rules.png)
+
+> The next step i copy my  public ip to test on chrome browser to ensure it's working 
 
 > TESTING
 
