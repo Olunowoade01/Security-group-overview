@@ -17,7 +17,7 @@ exploring the core concept of the Amazon web service which focuses on Security G
 
 
 
-#  After entering the IP address into your Chrome browser and hitting enter, I noticed that the page doesn't load. It keeps attempting to connect and eventually shows a message saying that the site can't be reached.
+#  After entering the IP address into my Chrome browser and hitting enter, I noticed that the page doesn't load. It keeps attempting to connect and eventually shows a message saying that the site can't be reached.
 
 ![2](./img/02%20Error%20.png)
 
@@ -29,7 +29,7 @@ exploring the core concept of the Amazon web service which focuses on Security G
 # To resolve this issue, we can create a new security group that allows HTTP (Port 80) traffic.
 
 
-> First, I navigate to the Security Groups section in AWS and click on Create Security Group. This will allow us to set up a new security group with the necessary rules to allow HTTP traffic.
+> First, I navigate to the Security Groups section in AWS and click on Create Security Group. This will allow me to set up a new security group with the necessary rules to allow HTTP traffic.
 
 ![sg](./img/3.%20create%20new%20SG.png)
 
@@ -92,7 +92,7 @@ exploring the core concept of the Amazon web service which focuses on Security G
 
 
 
-# After confirming that your IP address is working successfully, i have proceeded to the next step of checking how the inbound and outbound rules are configured.
+# After confirming that my IP address is working successfully, i have proceeded to the next step of checking how the inbound and outbound rules are configured.
 
 
 > With these rules, my instance is accessible over the web via HTTP, and i can also connect to it remotely using SSH.
@@ -127,7 +127,7 @@ exploring the core concept of the Amazon web service which focuses on Security G
 
 
 
-# Even though we've removed the outbound rule that allows all traffic from the instance to the outside world, we can still access the website successfully. This behavior is due to the stateful nature of AWS security groups.
+# Even though i have removed the outbound rule that allows all traffic from the instance to the outside world, i can still access the website successfully. This behavior is due to the stateful nature of AWS security groups.
 
 
 ![testing](./img/11%20ip%20working.png)
@@ -135,7 +135,7 @@ exploring the core concept of the Amazon web service which focuses on Security G
 > So, it confirms that the stateful nature of security groups allows the website to remain accessible
 
 
-# When the inbound rule is removed, you're essentially closing all access to and from the instance, which blocks any incoming traffic to the website. This means that no external IP address or user will be able to access the website hosted on the instance anymore.
+# When the inbound rule is removed,i am essentially closing all access to and from the instance, which blocks any incoming traffic to the website. This means that no external IP address or user will be able to access the website hosted on the instance anymore.
 
 ![inbound edit](./img/inbound%20delete.png)
 
